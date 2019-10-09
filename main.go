@@ -9,9 +9,13 @@ func main() {
 	//Declaring slice
 	//cards := []string{"Ace of Hearts", newCard()}
 
-	// cards := newDeck()
+	cards := newDeck()
+	cards.shuffle()
+	//Saving the deck to a file
 	// cards.saveToFile("mycards")
-	cards := newDeckFromFile("mycards")
+
+	//Creating new deck from an exsisting file
+	// cards := newDeckFromFile("mycards")
 
 	hand, remainingCards := deal(cards, 6)
 	hand.print()
