@@ -9,6 +9,7 @@ func main() {
 	//Declaring slice
 	//cards := []string{"Ace of Hearts", newCard()}
 	cards := newDeck()
+	cards.saveToFile("mycards")
 	hand, remainingCards := deal(cards, 6)
 	hand.print()
 	remainingCards.print()
